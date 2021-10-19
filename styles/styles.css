@@ -1,38 +1,38 @@
+:root{
+    --color-text: #5A0DAC
+}
+
 .MyPhoto{
     box-shadow: 10px 10px #6514b6;
 }
 .ConnectionWithMe{
-    color: #5A0DAC;
+    color: var(--color-text);
     border: 0px solid black;
-    float: left;
-    margin-right: 86%;
-    text-align: left;
+    padding: 4;
+    margin: 0;
 }
 .HelloPhrase{
-    color: #5A0DAC;
+    color: var(--color-text);
     border: 0px solid black;
-    float: left;
-    margin-right: 35%;
-    text-align: left;
+    padding: 0;
 }
 .AboutMe{
-    color: #5A0DAC;
+    color: var(--color-text);
     border: 0px solid black;
-    float: left;
-    margin-right: 70%;
-    text-align: left;
+    padding: 0;
 }
 .MyCode{
-    color: #5A0DAC;
+    color: var(--color-text);
     border: 0px solid black;
-    float: left;
-    margin-right: 100%;
-    text-align: left;
+    padding: 0;
 }
 .CSharpCode{
     color: black;
+    border: 0px solid black;
+    padding: 0;
 }
 .PictureDescription{
-    color: #5A0DAC;
+    color: var(--color-text);
     border: 0px solid black;
+    padding: 0;
 }
