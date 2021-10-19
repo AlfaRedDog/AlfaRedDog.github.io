@@ -1,0 +1,38 @@
+.MyPhoto{
+    box-shadow: 10px 10px #6514b6;
+}
+.ConnectionWithMe{
+    color: #5A0DAC;
+    border: 0px solid black;
+    float: left;
+    margin-right: 86%;
+    text-align: left;
+}
+.HelloPhrase{
+    color: #5A0DAC;
+    border: 0px solid black;
+    float: left;
+    margin-right: 35%;
+    text-align: left;
+}
+.AboutMe{
+    color: #5A0DAC;
+    border: 0px solid black;
+    float: left;
+    margin-right: 70%;
+    text-align: left;
+}
+.MyCode{
+    color: #5A0DAC;
+    border: 0px solid black;
+    float: left;
+    margin-right: 100%;
+    text-align: left;
+}
+.CSharpCode{
+    color: black;
+}
+.PictureDescription{
+    color: #5A0DAC;
+    border: 0px solid black;
+}

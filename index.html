@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <link rel="stylesheet" href="styles\styles.css">
     <title>Чесноков Михаил М33051</title>
     <meta charset="utf-8">
     <meta name="keywords" content="Чесноков, Михаил, резюме, портфолио">
     <meta name="description" content="страничка - портфолио студента группы M33051 Чеснокова Михаила">
+    <style>
+        body {background-color: #fff133;}
+</style>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="ConnectionWithMe">
             <h3>Связь со мной:</h3>
             <ul>
                 <li><a href="https://github.com/AlfaRedDog">GitHub</a> </a></li>
@@ -18,8 +22,9 @@
         </nav>
     </header>
     <main>
-        <h2>Меня зовут Чесноков Михаил и я учусь в группе M33051</h2>
-        <section>
+        <h2 class="HelloPhrase">Меня зовут Чесноков Михаил и я учусь в группе M33051</h2>
+        <section class="AboutMe">
+            <img width="300" height="300" src="resourses\MyPhoto.jpg" class="MyPhoto">
             <h3>Любимая цитата:</h3>
             <p>Если волк молчит, то его лучше не перебивать.</p>
             <h3>Формула успеха:</h3>
@@ -36,7 +41,7 @@
                 <li>Не работаю</li>
             </ul>
         </section>
-        <section>
+        <section class="MyCode">
             <article>
                 <h3>Мои навыки:</h3>
                 <ul>
@@ -46,7 +51,7 @@
                 </ul>
                 <h3>Пример кода:</h3>
                 <pre>
-                    <code>
+                    <code class="CSharpCode">
                         void IAccount.TransferMoney(double money, IAccount recepient)
                         {
                             if (money < _Money)
@@ -87,7 +92,7 @@
         </section>
         <section>
             <aside>
-                <h3>Картинка_смешная.png</h3>
+                <h3 class="PictureDescription">Картинка_смешная.png</h3>
                 <pre>
                     ░░░░░░░▄▀▀▄░░░░░░░░░░░░
                     ░░░░░▄▀▒▒▒▒▀▄░ЗАПУСКАЕМ░░
@@ -110,7 +115,7 @@
     </main>
     <footer>
         <nav>
-            <h3>Связь со мной:</h3>
+            <h3 class="ConnectionWithMe">Связь со мной:</h3>
             <ul>
                 <li><a href="https://github.com/AlfaRedDog">GitHub</a> </a></li>
                 <li><a href="https://vk.com/alfareddog">Вконтакте</a> </a></li>
