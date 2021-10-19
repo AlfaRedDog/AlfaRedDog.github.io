@@ -1,7 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
+<head>
+    <title>Чесноков Михаил М33051</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Чесноков, Михаил, резюме, портфолио">
+    <meta name="description" content="страничка - портфолио студента группы M33051 Чеснокова Михаила">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <header>
+        <nav>
+            <h3>Связь со мной:</h3>
+            <ul>
+                <li><a href="https://github.com/AlfaRedDog">GitHub</a> </a></li>
+                <li><a href="https://vk.com/alfareddog">Вконтакте</a> </a></li>
+                <li><a href="mailto:misha.chesnokov.2019@mail.ru">Почта</a> </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Меня зовут Чесноков Михаил и я учусь в группе M33051</h2>
+        <section>
+            <h3>Любимая цитата:</h3>
+            <p>Если волк молчит, то его лучше не перебивать.</p>
+            <h3>Формула успеха:</h3>
+            <p>1 + 1 = 11</p>
+            <h3>Мои успехи:</h3>
+            <ul>
+                <li>Сдал на права</li>
+                <li>Доучился до 3 курса</li>
+                <li>Убрался в квартире</li>
+            </ul>    
+            <h3>Мои неудачи:</h3>
+            <ul>
+                <li>Не закрыл долг в ППА1</li>
+                <li>Не работаю</li>
+            </ul>
+        </section>
+        <section>
+            <article>
+                <h3>Мои навыки:</h3>
+                <ul>
+                    <li>SQL</li>
+                    <li>ООП</li>
+                    <li>Готовлю еще хорошо. Да.</li>
+                </ul>
+                <h3>Пример кода:</h3>
+                <pre>
+                    <code>
+                        void IAccount.TransferMoney(double money, IAccount recepient)
+                        {
+                            if (money < _Money)
+                                throw new NotEnoughMoneyException();
+                            if (DateTime.Now < DepositTime)
+                                throw new NotTimeSonException();
+                            recepient.AddMoney(money);
+                            _Money -= money;
+                        }
+                        public void ACalculateProcentPerDay()
+                        {
+                            //if ((DateTime.Now - LastDayAddProcent).Days == 0) return; // full version
+                            if ((DateTime.Now - LastDayAddProcent).Seconds == 0) return; // time machine version
+                            //Console.WriteLine(ProcentPerMonth);
+                            //Console.WriteLine(ProcentOnMod);
+                            //Console.WriteLine(100.0 / 365.0);
+                            ProcentPerMonth += _Money * (ProcentOnMod / 100.0 / 365.0);
+                            LastDayAddProcent = DateTime.Now;
+                        }
+                        public void AddprocentMonth()
+                        {
+                            //if ((DateTime.Now - FirstDayOfMonth).Days < 30) return; // full version
+                            if ((DateTime.Now - FirstDayOfMonth).Seconds < 30) return; // time machine version
+                            _Money += ProcentPerMonth;
+                            ProcentPerMonth = 0;
+                            FirstDayOfMonth = DateTime.Now;
+                            LastDayAddProcent = DateTime.Now;
+                        }
+                        public double CalculateProcent(DateTime date)
+                        {
+                            if (date >= DateCreate)
+                                _Money += _Money * ((date - DateTime.Now).Days % 30 * ProcentOnMod / 100.0 / 12.0);
+                            return _Money;
+                        }
+                    </code>
+                </pre>
+            </article>
+        </section>
+        <section>
+            <aside>
+                <h3>Картинка_смешная.png</h3>
+                <pre>
+                    ░░░░░░░▄▀▀▄░░░░░░░░░░░░
+                    ░░░░░▄▀▒▒▒▒▀▄░ЗАПУСКАЕМ░░
+                    ░░░░░░▀▌▒▒▐▀░░ГУСЕПЕТУХА░░
+                    ▄███▀░◐░░░▌░░░РАБОТЯГИ░░░
+                    ░░▐▀▌░░░░░▐░░░░░░░░░▄▀▀▀▄▄
+                    ░▐░░▐░░░░░▐░░░░░░░░░█░▄█▀
+                    ░▐▄▄▌░░░░░▐▄▄░░░░░░█░░▄▄▀▀▀▀▄
+                    ░░░░▌░░░░▄▀▒▒▀▀▀▀▄▀░▄▀░▄▄▄▀▀
+                    ░░░▐░░░░▐▒▒▒▒▒▒▒▒▀▀▄░░▀▄▄▄░▄
+                    ░░░▐░░░░▐▄▒▒▒▒▒▒▒▒▒▒▀▄░▄▄▀▀
+                    ░░░░▀▄░░░░▀▄▒▒▒▒▒▒▒▒▒▒▀▄░
+                    ░░░░░▀▄▄░░░█▄▄▄▄▄▄▄▄▄▄▄▀▄
+                    ░░░░░░░░▀▀▀▄▄▄▄▄▄▄▄▀▀░
+                    ░░░░░░░░░░░▌▌░▌▌
+                    ░░░░░░░░░▄▄▌▌▄▌▌
+                </pre>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <h3>Связь со мной:</h3>
+            <ul>
+                <li><a href="https://github.com/AlfaRedDog">GitHub</a> </a></li>
+                <li><a href="https://vk.com/alfareddog">Вконтакте</a> </a></li>
+                <li><a href="mailto:misha.chesnokov.2019@mail.ru">Почта</a> </a></li>
+            </ul>
+        </nav>
+    </footer>
 </body>
-</html>
