@@ -1,33 +1,61 @@
 :root{
     --color-text: #5A0DAC
+
+}
+.Guse{
+    /*z-index: -20;*/
+    position: fixed;
+    margin-left: 80%;
+    color: var(--color-text);
+    /*background-color: whitesmoke;*/
 }
 
 .MyPhoto{
-    box-shadow: 10px 10px #6514b6;
+    opacity: 0.9;
+    width: 350px;
+    height: 350px;
+    box-shadow: 10px 10px var(--color-text);
+    float: left;
+    margin-right: 3%;
 }
+.MyPhoto:hover{
+    opacity: 1;
+    width: 350px;
+    height: 350px;
+    float: left;
+    box-shadow: 10px 10px var(--color-text);
+    margin-right: 3%;
+}
+
 .ConnectionWithMe{
+    background-color: yellowgreen;
+    font-size: medium;
     color: var(--color-text);
     border: 0px solid black;
-    padding: 4;
-    margin: 0;
 }
 .HelloPhrase{
+    text-decoration: line-through;
+    text-transform: capitalize;
+    font-weight: bold;
     color: var(--color-text);
     border: 0px solid black;
     padding: 0;
 }
 .AboutMe{
+    /*z-index: 15;*/
     color: var(--color-text);
     border: 0px solid black;
     padding: 0;
 }
 .MyCode{
+    line-height: 20px;
+    font-family: cursive;
     color: var(--color-text);
     border: 0px solid black;
     padding: 0;
 }
 .CSharpCode{
-    color: black;
+    color: var(--color-text)k;
     border: 0px solid black;
     padding: 0;
 }
