@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link href="styles\TaskManager.css" rel="stylesheet">
+    <script src="js\ToDoForm.js"></script>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div id="wrap">
+        <main>
+            <div class="TaskManager">
+                <form onsubmit="newElement(1); return false" id="TaskHeadid" class="TaskHead">
+                    <input type="text" id="myInput" placeholder="Новая задача" autocomplete="off" required>
+                </form>
+                <div class="TaskLines">
+                    <ul id="myUL">
+                        <template id="line">
+                            <li class ="taskLine">
+                                <img src="resourses\competed.png" class="close">
+                                <div class="del">
+                                    <img src="resourses\circlee.png" class="circle">
+                                    <img src="resourses\delete.png" class="cross">
+                                </div>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

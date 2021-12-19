@@ -1,0 +1,13 @@
+body {
+    font-size: 17px;
+    line-height: 23px;
+    background: #fff;
+}
+
+.information-block {
+    padding-top: 6vw;
+    padding-bottom: 6vw;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+}

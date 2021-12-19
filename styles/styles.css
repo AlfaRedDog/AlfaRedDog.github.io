@@ -7,11 +7,12 @@
     position: fixed;
     margin-left: 80%;
     color: var(--color-text);
+    font-size: x-large;
     /*background-color: whitesmoke;*/
 }
 
 .MyPhoto{
-    opacity: 0.9;
+    opacity: 0;
     width: 350px;
     height: 350px;
     box-shadow: 10px 10px var(--color-text);
