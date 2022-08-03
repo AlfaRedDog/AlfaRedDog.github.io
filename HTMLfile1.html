@@ -1,0 +1,2290 @@
+
+<link rel="stylesheet" type="text/css" href="/styles/ratingStyle.css"/>
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<script type="text/javascript" src="/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="/scripts/jquery-ui-1.8.11.custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/styles/smoothness/jquery-ui-1.8.11.custom.css"/>
+
+<title>Рейтинговые списки</title>
+
+<script type="text/javascript">
+    function showForm(pupilId, groupId) {
+        $("#dialog:ui-dialog").dialog("destroy");
+
+        $("#dialog-modal").dialog({
+            modal:true,
+            position:'center',
+            width:250,
+            resizable:false
+        });
+
+        $("#dialog-modal").html('<p style="text-align:center"><img src="/images/loading.gif"/></p>');
+        $("#dialog-modal").load('/pupil-rating/get-marks', {pupilId:pupilId, groupId:groupId});
+    }
+    function showNull() {
+        $("#dialog:ui-dialog").dialog("destroy");
+
+        $("#dialog-modal-null").dialog({
+            modal:true,
+            position:'center',
+            width:250,
+            resizable:false
+        });
+    }
+
+    function showBenefit() {
+        $("#dialog:ui-dialog").dialog("destroy");
+
+        $("#dialog-modal-benefit").dialog({
+            modal:true,
+            position:'center',
+            width:250,
+            resizable:false
+        });
+    }
+</script>
+
+<div style="width: 95%; padding-left: 20px; padding-top: 20px;">
+    <a style="font-size:16px" href="javascript:history.back();void(0);">Назад</a><br/>
+
+            
+
+    
+    <table class="w100" id="ratingTable">
+        <tr class="throw">
+            <th colspan="10">
+                Информационная безопасность ИИКС бакалавриат, бюджет, очная форма (Бюджет, Очная)            </th>
+        </tr>
+        <tr class="throw">
+            <th>
+                Номер
+            </th>
+            <th>
+                Статус
+            </th>
+
+            
+        <th>
+            СНИЛС / № дела
+        </th>
+        
+            <th>
+                Общежитие
+            </th>
+            <th>
+                Баллы за экзамены
+            </th>
+            <th>
+                Сумма баллов
+            </th>
+            <th>
+                Документы
+            </th>
+            <th></th>
+        </tr>
+
+                
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                                                
+        
+                                                                
+        
+                                                                
+        
+                                    
+        
+                                                                
+        
+                                                                
+        
+                                    
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                    
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                    
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                    
+        
+                                                    
+            
+        
+                                    
+        
+                                                    
+            
+        
+                                    
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                                    
+            
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                                                
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                                                
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                                                
+        
+                                                                
+        
+                                                                
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                                                
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+        
+                                    
+                <tr class="throw">
+            <th colspan="10">
+                Особые права
+            </th>
+        </tr>
+        <tr class="trPos" style="color:green">
+                        <td class="pos">
+                            5
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 184-224-931 72 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">245</span>
+                            <span style="display:none" class="sumMark">245</span>
+                        </td><td class="fullSumSt">252</td>
+                        <td class="origSt">Оригинал</td>
+                    <td></td>
+                    </tr>        <tr class="throw">
+            <th colspan="10">
+                Специальная квота(список не публикуется)
+            </th>
+        </tr>
+
+        <tr class="throw">
+            <th colspan="10">
+                Целевой прием(без учета детализации)
+            </th>
+        </tr>
+        <tr class="trPos" style="color:green">
+                        <td class="pos">
+                            9
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 159-367-176 09 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">263</span>
+                            <span style="display:none" class="sumMark">263</span>
+                        </td><td class="fullSumSt">270</td>
+                        <td class="origSt">Оригинал</td>
+                        </td>
+                        <td class="origSt">АО "ФЦНИВТ "СНПО "Элерон"</td>
+            </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            10
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 172-262-054 42 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">256</span>
+                            <span style="display:none" class="sumMark">256</span>
+                        </td><td class="fullSumSt">266</td>
+                        <td class="origSt">Оригинал</td>
+                        </td>
+                        <td class="origSt">ФГУП НПП "Гамма"</td>
+            </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            11
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 189-250-410 86 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">257</span>
+                            <span style="display:none" class="sumMark">257</span>
+                        </td><td class="fullSumSt">264</td>
+                        <td class="origSt">Оригинал</td>
+                        </td>
+                        <td class="origSt">РТ-информ</td>
+            </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            12
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 160-536-084 45 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">252</span>
+                            <span style="display:none" class="sumMark">252</span>
+                        </td><td class="fullSumSt">259</td>
+                        <td class="origSt">Оригинал</td>
+                        </td>
+                        <td class="origSt">АО "РАСУ"</td>
+            </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            14
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 164-482-304 69 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">245</span>
+                            <span style="display:none" class="sumMark">245</span>
+                        </td><td class="fullSumSt">251</td>
+                        <td class="origSt">Оригинал</td>
+                        </td>
+                        <td class="origSt">Министерство цифрового развития республики Калмыкия</td>
+            </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            15
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 176-383-391 03 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">238</span>
+                            <span style="display:none" class="sumMark">238</span>
+                        </td><td class="fullSumSt">242</td>
+                        <td class="origSt">Оригинал</td>
+                        </td>
+                        <td class="origSt">АО Корпорация МИТ</td>
+            </tr>        <tr class="throw">
+            <th colspan="10">
+                Без экзаменов
+            </th>
+        </tr>
+        <tr class="trPos" style="color:green">
+                        <td class="pos">
+                            17
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 172-257-438 69 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Всерооссийская олимпиада школьников (технология)<br />Статус: Призер<br />ИД: 0</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            18
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 186-598-328 41 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Всероссийский конкурс научных работ школьников «Юниор» (инженерные науки)<br />Статус: Победитель<br />ИД: 10</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            19
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 165-636-834 00 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Всероссийская олимпиада школьников «Высшая проба» (информатика)<br />Статус: Победитель<br />ИД: 10</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            20
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 168-329-958 20 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Объединённая межвузовская математическая олимпиада школьников<br />Статус: Победитель<br />ИД: 10</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            21
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 171-257-829 73 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Межрегиональная олимпиада школьников им. И.Я. Верченко (математика)<br />Статус: Победитель<br />ИД: 9</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            23
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 184-575-476 16 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Олимпиада школьников «Ломоносов» (математика)<br />Статус: Призер<br />ИД: 10</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            24
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 184-532-744 86 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Олимпиада Курчатов (математика)<br />Статус: Призер<br />ИД: 10</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            25
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 187-208-472 93 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Инженерная олимпиада школьников<br />Статус: Призер<br />ИД: 10</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            26
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 191-483-597 02 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Олимпиада школьников «Шаг в будущее» (физика)<br />Статус: Призер<br />ИД: 10</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            27
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 162-039-965 65 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Олимпиада школьников «Ломоносов» по физике<br />Статус: Призер<br />ИД: 10</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            28
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 188-651-558 25 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Олимпиада школьников «Физтех» (математика)<br />Статус: Призер<br />ИД: 10</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            29
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 157-356-354 87 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Межрегиональная олимпиада школьников им. И.Я. Верченко (компьютерная безопасность)<br />Статус: Призер<br />ИД: 10</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            30
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 182-917-292 99 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Олимпиада «Росатом» по математике<br />Статус: Призер<br />ИД: 10</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            31
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 183-007-882 63 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Олимпиада Курчатов (математика)<br />Статус: Призер<br />ИД: 10</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            32
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 169-403-195 81 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Олимпиада школьников «Физтех» (математика)<br />Статус: Призер<br />ИД: 9</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            33
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 146-234-715 53 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Отраслевая физико-математическая олимпиада школьников «Росатом» (математика)<br />Статус: Призер<br />ИД: 9</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            35
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 187-848-202 28 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Всероссийский конкурс научных работ школьников «Юниор» (инженерные науки)<br />Статус: Призер<br />ИД: 8</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            36
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 145-272-240 44 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Олимпиада школьников «Физтех» (физика)<br />Статус: Призер<br />ИД: 8</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            37
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 200-199-150 17 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Отраслевая физико-математическая олимпиада школьников «Росатом» (математика)<br />Статус: Призер<br />ИД: 7</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            38
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 155-602-725 57 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Олимпиада школьников «Физтех» (математика)<br />Статус: Призер<br />ИД: 7</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            40
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 164-656-082 87 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Олимпиада школьников «Физтех» (физика)<br />Статус: Призер<br />ИД: 6</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            42
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 184-314-423 58 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Олимпиада «Росатом» по математике<br />Статус: Призер<br />ИД: 4</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            44
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 166-817-801 03 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Объединенная межвузовская математическая олимпиада<br />Статус: Призер<br />ИД: 2</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            45
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 144-326-678 60 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Олимпиада школьников «Физтех» (физика)<br />Статус: Призер<br />ИД: 2</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            46
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 188-939-185 56 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Олимпиада школьников «Физтех» (математика)<br />Статус: Призер<br />ИД: 2</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            47
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 165-383-512 80 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Отраслевая физико-математическая олимпиада школьников «Росатом» (физика)<br />Статус: Призер<br />ИД: 2</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            48
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 173-422-613 50 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Отраслевая физико-математическая олимпиада школьников «Росатом» (физика)<br />Статус: Призер<br />ИД: 1</td>
+                    </tr><tr class="trPos" style="color:green">
+                        <td class="pos">
+                            49
+                        </td>
+                        <td class="orderStr">
+                            <span class='willAccept'>Приказ от 30.07.2022 №211/1-4</span>
+                        </td>
+                           <td class="uniques"> 170-286-546 69 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class=""></td><td class="fullSumSt">-</td>
+                        <td class="origSt">Оригинал</td>
+                        <td class="scComp">Олимпиада: Отраслевая физико-математическая олимпиада школьников «Росатом» (математика)<br />Статус: Призер<br />ИД: 1</td>
+                    </tr>
+
+        <tr class="throw">
+            <th colspan="10">
+                Общий конкурс
+            </th>
+        </tr>
+        <tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            54
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 164-466-806 92 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">298</span>
+                            <span style="display:none" class="sumMark">298</span>
+                        </td><td class="fullSumSt">308</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            58
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 164-559-178 00 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">296</span>
+                            <span style="display:none" class="sumMark">296</span>
+                        </td><td class="fullSumSt">306</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            79
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 194-328-697 10 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">291</span>
+                            <span style="display:none" class="sumMark">291</span>
+                        </td><td class="fullSumSt">301</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            113
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 154-923-609 79 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">287</span>
+                            <span style="display:none" class="sumMark">287</span>
+                        </td><td class="fullSumSt">294</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            120
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 175-891-267 20 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">286</span>
+                            <span style="display:none" class="sumMark">286</span>
+                        </td><td class="fullSumSt">293</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            127
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 180-585-075 81 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">283</span>
+                            <span style="display:none" class="sumMark">283</span>
+                        </td><td class="fullSumSt">293</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            142
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 200-871-568 39 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">282</span>
+                            <span style="display:none" class="sumMark">282</span>
+                        </td><td class="fullSumSt">291</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            162
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 193-651-731 94 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">279</span>
+                            <span style="display:none" class="sumMark">279</span>
+                        </td><td class="fullSumSt">289</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            165
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 183-404-966 78 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">279</span>
+                            <span style="display:none" class="sumMark">279</span>
+                        </td><td class="fullSumSt">289</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            166
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 184-983-194 30 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">288</span>
+                            <span style="display:none" class="sumMark">288</span>
+                        </td><td class="fullSumSt">288</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            183
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 200-199-157 24 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">284</span>
+                            <span style="display:none" class="sumMark">284</span>
+                        </td><td class="fullSumSt">286</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            184
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 164-821-775 86 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">282</span>
+                            <span style="display:none" class="sumMark">282</span>
+                        </td><td class="fullSumSt">286</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            190
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 159-540-431 80 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">276</span>
+                            <span style="display:none" class="sumMark">276</span>
+                        </td><td class="fullSumSt">286</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            197
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 180-063-207 27 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">278</span>
+                            <span style="display:none" class="sumMark">278</span>
+                        </td><td class="fullSumSt">285</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            204
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 192-473-055 80 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">279</span>
+                            <span style="display:none" class="sumMark">279</span>
+                        </td><td class="fullSumSt">284</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            207
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 150-343-751 30 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">277</span>
+                            <span style="display:none" class="sumMark">277</span>
+                        </td><td class="fullSumSt">284</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            212
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 181-234-458 52 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">274</span>
+                            <span style="display:none" class="sumMark">274</span>
+                        </td><td class="fullSumSt">284</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            214
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 157-992-305 17 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">274</span>
+                            <span style="display:none" class="sumMark">274</span>
+                        </td><td class="fullSumSt">284</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            215
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 191-756-693 16 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">283</span>
+                            <span style="display:none" class="sumMark">283</span>
+                        </td><td class="fullSumSt">283</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            219
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 202-215-196 96 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">280</span>
+                            <span style="display:none" class="sumMark">280</span>
+                        </td><td class="fullSumSt">282</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            222
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 160-797-820 99 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">277</span>
+                            <span style="display:none" class="sumMark">277</span>
+                        </td><td class="fullSumSt">282</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            236
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 188-076-446 12 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">274</span>
+                            <span style="display:none" class="sumMark">274</span>
+                        </td><td class="fullSumSt">281</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            251
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 191-740-993 97 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">270</span>
+                            <span style="display:none" class="sumMark">270</span>
+                        </td><td class="fullSumSt">280</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            255
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 157-240-926 66 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">275</span>
+                            <span style="display:none" class="sumMark">275</span>
+                        </td><td class="fullSumSt">279</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            257
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 185-617-434 98 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">273</span>
+                            <span style="display:none" class="sumMark">273</span>
+                        </td><td class="fullSumSt">279</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            258
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 183-601-673 68 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">273</span>
+                            <span style="display:none" class="sumMark">273</span>
+                        </td><td class="fullSumSt">279</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            269
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 207-137-474 45 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">272</span>
+                            <span style="display:none" class="sumMark">272</span>
+                        </td><td class="fullSumSt">278</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            270
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 194-379-725 26 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">272</span>
+                            <span style="display:none" class="sumMark">272</span>
+                        </td><td class="fullSumSt">278</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            271
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 180-166-478 66 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">271</span>
+                            <span style="display:none" class="sumMark">271</span>
+                        </td><td class="fullSumSt">278</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            272
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 188-424-109 90 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">271</span>
+                            <span style="display:none" class="sumMark">271</span>
+                        </td><td class="fullSumSt">278</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            273
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 186-320-024-50 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">270</span>
+                            <span style="display:none" class="sumMark">270</span>
+                        </td><td class="fullSumSt">278</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            287
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 156-003451 25 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">270</span>
+                            <span style="display:none" class="sumMark">270</span>
+                        </td><td class="fullSumSt">277</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            289
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 183-261-809 72 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">276</span>
+                            <span style="display:none" class="sumMark">276</span>
+                        </td><td class="fullSumSt">276</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            310
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 166-749-210 03 </td>
+                        <td class="campusSt">Обязательно</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">272</span>
+                            <span style="display:none" class="sumMark">272</span>
+                        </td><td class="fullSumSt">274</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr><tr class="trPosBen" style="color:green">
+                        <td class="pos">
+                            340
+                        </td>
+                        <td class="orderStr">
+                            
+                        </td>
+                           <td class="uniques"> 133-564-928 68 </td>
+                        <td class="campusSt">Не требуется</td>
+                        <td class="">
+                            
+                            <span style="font-weight:bold; text-decoration:underline;">271</span>
+                            <span style="display:none" class="sumMark">271</span>
+                        </td><td class="fullSumSt">271</td>
+                        <td class="origSt">Оригинал</td>
+                        <td></td>
+                    </tr>    </table>
+    <br/>
+    <br/>
+</div>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            var i = 0;
+
+            var k = 1;
+            var j = 0;
+
+            var brownCounter = 1;
+
+            var boolTmp = false;
+
+            var campusCounter = 1;
+
+            $('#ratingTable .trPosBen').each(function ()
+            {
+
+                
+                var strCompare = $(this).find('.orderStr').html();
+
+                if ($(this).find('.willAccept').html() == 'Рекомендован(а) при условии зачета индивидуальных достижений')
+                {
+                    $(this).find('.orPos').html('&nbsp;');
+                }
+                else if (($(this).find('.willAccept').html() != 'Зачислен(а)' && $(this).find('.willAccept').html() != 'Отказ от зачисления') || (strCompare.indexOf('Приказ от') + 1))
+                {
+
+
+                    
+                    if (($(this).find('.sumMark').html() < 0) && $(this).find('.sumMark').html() != 0)
+                    {
+                        $(this).find('.orPos').html('&nbsp;');
+                    }
+                                    }
+
+            });
+
+                        $('#ratingTable .pos').each(function ()
+            {
+                i++;
+                $(this).html(i);
+            });
+                    })
+    </script>
+
+<div id="dialog-modal" title="Информация об оценках" style="display:none;">
+</div>
+
+<div id="dialog-modal-null" title="Информация об оценках" style="display:none;">
+    <div
+            style="vertical-align:middle; font-size:15px; font-weight:bold; text-align:center; height:50px; padding-top:40px">
+        Не участвует в конкурсе
+    </div>
+</div>
+
+<div id="dialog-modal-benefit" title="Информация об оценках" style="display:none;">
+    <div
+            style="vertical-align:middle; font-size:15px; font-weight:bold; text-align:center; height:50px; padding-top:40px">
+        Без вступительных испытаний
+    </div>
+</div>
